@@ -1,0 +1,47 @@
+<form action = "http://localhost:5000/result" method = "POST">
+	<h1>Hypothetically, If you were a passenger on the titanic, How would you describe yourself</h1>
+	<label for="fname">Name : </label><br>
+	<select name="title" id="title">
+		<option value="Mr">Mr</option>
+		<option value="Mrs">Mrs</option>
+		<option value="Master">Master</option>
+		<option value="Miss">Miss</option>
+		<option value="Ms">Ms</option>
+	  	<option value="Capt">Capt</option>
+		<option value="Col">Col</option>
+		<option value="Countess">Countess</option>
+		<option value="Don">Don</option>
+		<option value="Dona">Dona</option>
+		<option value="Dr">Dr</option>
+		<option value="Jonkheer">Jonkheer</option>
+		<option value="Lady">Lady</option>
+		<option value="Major">Major</option>
+		<option value="Mlle">Mlle</option>
+		<option value="Mme">Mme</option>
+		<option value="Rev">Rev</option>
+		<option value="Sir">Sir</option>
+	</select>
+	<input type="text" id="fname" name="fname"><br><br>
+	<label for="pclass">You are most likely to be able to afford which ticket :</label><br>
+	<input type="radio" id="male" name="pclass" value="1">
+	<label for="1">First Class (30£ -870£ (approx.1724$-50000$ adjusted for inflation))</label><br>
+	<input type="radio" id="female" name="pclass" value="2">
+	<label for="2">Second Class (12£ (approx. $690 adjusted for inflation))</label><br>
+	<input type="radio" id="other" name="pclass" value="3">
+	<label for="3">Third Class (3£ -8£ (approx. 172$-460$ adjusted for inflation))</label>
+	<br><br>
+	<label for="Gender">Gender : (As The Titanic was boarding passengers during a less progressive time hence there is no data for non-binary genders)</label>
+	<select name="gender" id="genders">
+	  <option value="0">Male</option>
+	  <option value="1">Female</option>
+	</select>
+	<br><br>
+	<label for="fsize">Age : </label><br>
+	<input type="number" id="age" name="age" min="0" max="100"><br><br>
+	<label for="fsize">No. of family members/travelling companions : </label><br>
+	<input type="number" id="fzise" name="fsize" min="0" max="10"><br><br>
+	<input type="submit" value="Submit">
+</form>
+<div id="result">
+	{{result}}
+</div>
